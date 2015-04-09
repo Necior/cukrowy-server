@@ -60,4 +60,4 @@ def show_time():
                    peak_interval=app.config['PEAK_INTERVAL'])
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host=app.config['HOST'])
