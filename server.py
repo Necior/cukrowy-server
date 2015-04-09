@@ -20,18 +20,13 @@ def init_db():
         db.commit()
 
 
-def get_peak_interval():
-    """Return peak interval in seconds."""
-    return 60*15
-
-
 def get_time():
     return int(time.time())
 
 
 def get_peak():
     count = g.db.execute('select count(*) from wtfs where datetime >= ?',
-                         [str(get_time() - get_peak_interval())])
+                         [str(get_time() - app.config['PEAK_INTERVAL'])])
     return count.fetchone()[0]
 
 
@@ -61,7 +56,8 @@ def add_wtf():
 
 @app.route('/api/info')
 def show_time():
-    return jsonify(timestamp=get_time(), peak_interval=get_peak_interval())
+    return jsonify(timestamp=get_time(),
+                   peak_interval=app.config['PEAK_INTERVAL'])
 
 if __name__ == '__main__':
     app.run()
