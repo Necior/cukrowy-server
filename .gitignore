@@ -1,5 +1,8 @@
-*.pyc
 data.base
+
+# Python-related
+__pycache__/
+*.py[cod]
 
 # virtualenv
 .Python
