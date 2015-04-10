@@ -5,6 +5,7 @@ from contextlib import closing
 from flask import Flask, g, jsonify
 
 app = Flask(__name__)
+app.url_map.strict_slashes = False
 app.config.from_object('config')
 app.config.from_envvar('CUKROWY_SETTINGS', silent=True)
 
