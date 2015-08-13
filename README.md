@@ -21,8 +21,8 @@ Edit `config.py` according to your needs. Then, create the database by running `
 You can also provide your own configuration file with environment variable `CUKROWY_SETTINGS`, for example:
 
 ```
-export CUKROWY_SETTINGS=my_config.py
-python server.py
+$ export CUKROWY_SETTINGS=my_config.py
+$ python server.py
 ```
 
 ## Running
