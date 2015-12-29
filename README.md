@@ -5,7 +5,7 @@
 ## Installation
 
 ```
-$ git clone git@github.com:cukrowy/server.git
+$ git clone git@github.com:Necior/cukrowy-server.git
 $ cd server
 $ virtualenv cukrowy
 $ source cukrowy/bin/activate
